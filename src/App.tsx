@@ -1,12 +1,14 @@
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
-
-const theme = extendTheme({})
+import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
+import theme from './theme'
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <div>Hello World</div>
-    </ChakraProvider>
+    <>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      <ChakraProvider theme={theme} cssVarsRoot="body">
+        <div>Hello World</div>
+      </ChakraProvider>
+    </>
   )
 }
 
