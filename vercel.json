@@ -1,0 +1,14 @@
+{
+  "git": {
+    "deploymentEnabled": {
+      "main": true,
+      "develop": true,
+      "feature/*": false
+    }
+  },
+  "github": {
+    "enabled": true,
+    "silent": true
+  },
+  "framework": "vite"
+}
